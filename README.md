@@ -1,36 +1,52 @@
-Game Component build breakdown
+### Game Component Structure:
 
+1. **StartScreen Component**: 
+   - Display game title, description, and "Start Game" button.
+   - Optional: Settings or instructions links.
 
-1. **Game Initialization**:
-    - **StartScreen Component**: This component will display the game's title, a brief description, and a "Start Game" button. It might also have settings or instructions links.
+2. **MusicSelector Component**: 
+   - List of 30-second tracks from Deezer API.
+   - Each track: play button for preview, track name, artist name.
 
-2. **Music Selection**:
-    - **MusicSelector Component**: After starting the game, players can select a music track. This component will fetch a list of available 30-second tracks from the Deezer API and display them in a list or grid format. Each track might have a play button for preview, track name, and artist name.
+3. **GameBoard Component**: 
+   - Display rotating discs, score, and timer.
 
-3. **Gameplay**:
-    - **GameBoard Component**: This is where the actual gameplay happens. It will display the rotating discs, the score, and a timer.
-        - **Disc Component**: A smaller component to represent each rotating disc. It will have its own state to determine if it's spinning, its current angle, and if it's been matched.
-        - **ScoreDisplay Component**: A small component to show the current score.
-        - **TimerDisplay Component**: Displays the remaining time for the game.
+4. **Disc Component**: 
+   - Represents each rotating disc.
+   - State: spinning status, current angle, match status.
 
-4. **Animations**:
-    - **AnimatedDisc Component (with react-spring)**: This will be an enhanced version of the Disc Component, but with animations for spinning, matching, and any other visual effects.
-    - **BackgroundVisualizer Component (with three.js)**: This component will display animated visual effects based on the music being played. It's a background component that reacts to the music.
+5. **ScoreDisplay Component**: 
+   - Display current score.
 
-5. **End of Game**:
-    - **EndScreen Component**: Once the game is over (either by matching all discs or running out of time), this component will display the final score, a "Play Again" button, and maybe some social share options or links to other games.
+6. **TimerDisplay Component**: 
+   - Display remaining game time.
 
-6. **API Interaction**:
-    - **APIHandler Component (or custom hook)**: This isn't a visual component but a logical one. It will handle all interactions with the Deezer API, such as fetching the list of tracks. If you're using hooks, this could be a custom hook like `useDeezerAPI()`.
+7. **AnimatedDisc Component (using react-spring)**: 
+   - Enhanced Disc Component with animations.
 
-7. **Error Handling**:
-    - **ErrorDisplay Component**: If there's an error (like failing to fetch tracks from Deezer), this component will display an error message to the user.
+8. **BackgroundVisualizer Component (using three.js)**: 
+   - Animated visual effects reacting to music.
 
-8. **General Layout and Styling**:
-    - **Layout Component**: This component will handle the general layout of the game, like positioning the GameBoard in the center, setting background colors or images, etc.
-    - **Button Component**: A reusable button component for various actions like starting the game, selecting a track, etc.
+9. **EndScreen Component**: 
+   - Display final score and "Play Again" button.
+   - Optional: Social share options or other game links.
 
-9. **Optional Enhancements**:
-    - **Settings Component**: If you want to provide settings like difficulty levels, this component will handle that.
-    - **Instructions Component**: A modal or separate screen that provides instructions on how to play the game.
+10. **APIHandler Component/custom hook**: 
+   - Handle Deezer API interactions.
 
+11. **ErrorDisplay Component**: 
+   - Display error messages.
+
+12. **Layout Component**: 
+   - Handle game's general layout.
+
+13. **Button Component**: 
+   - Reusable button for various actions.
+
+### Optional Components:
+
+- **Settings Component**: 
+  - Manage game settings.
+
+- **Instructions Component**: 
+  - Provide game instructions.
