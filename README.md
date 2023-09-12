@@ -1,17 +1,5 @@
-# React + Vite
+Game Component build breakdown
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-
-
-
-
-Certainly! Let's break down the game into its core components and functionalities, and then identify the React components that would be needed to implement them:
 
 1. **Game Initialization**:
     - **StartScreen Component**: This component will display the game's title, a brief description, and a "Start Game" button. It might also have settings or instructions links.
@@ -46,6 +34,3 @@ Certainly! Let's break down the game into its core components and functionalitie
     - **Settings Component**: If you want to provide settings like difficulty levels, this component will handle that.
     - **Instructions Component**: A modal or separate screen that provides instructions on how to play the game.
 
-Given the above components, you'd structure your React app to have parent-child relationships where necessary. For instance, the GameBoard might be a parent component that contains Disc, ScoreDisplay, and TimerDisplay as child components.
-
-Remember, the beauty of React is its component-based architecture, allowing you to break down your UI into reusable and manageable pieces. This list provides a starting point, but as you develop the game, you might find the need to further break down components or add new ones based on your design and functionality needs.
