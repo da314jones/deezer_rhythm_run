@@ -1,24 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import 'tailwindcss/tailwind.css';
-import './tailwind.css';
-import { Button } from 'reactstrap';
+import { useState } from "react";
 
-import './App.css'
+import "tailwindcss/tailwind.css";
+import "./tailwind.css";
+import { Button } from "reactstrap";
+
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [count, setCount] = useState(0);
 
   return (
     <>
-       <div className="bg-blue-500 text-white p-4 font-bold underline">
-      Hello, Tailwind!
-      <Button color="danger">Click Me</Button>
-    </div>
+      <div className="bg-blue-500 text-white p-4 font-bold underline">
+        Hello, Tailwind!
+        <Button color="danger">Click Me</Button>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
