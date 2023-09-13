@@ -5,7 +5,7 @@ export default function MusicSelector() {
   const [tracks, SetTracks] = useState([]);
   const [selectedTrack, setSelectedTrack] = useState(null);
 
-  
+
   useEffect(() => {
     const playListUrl = getPlayListUrl();
 
@@ -14,6 +14,7 @@ export default function MusicSelector() {
       .then((data) => {
         const filteredTracks = data.filter((track) => track.duration === 30);
 
+        
         SetTracks(filteredTracks);
       })
       .catch((error) => {
