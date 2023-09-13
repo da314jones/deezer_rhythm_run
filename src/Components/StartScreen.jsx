@@ -6,7 +6,8 @@ export default function StartScreen() {
       <h1>Hello Gamers, Welcome to Deezer Rhythm Run</h1>
       <p>
         Deezer Rhythm Run is a music matching game where you must match discs to
-        the rhythm of the music. Get ready for this amazing rhythm-filled challenge.
+        the rhythm of the music. Get ready for this amazing rhythm-filled
+        challenge.
       </p>
       <div className="btn-container">
         <button className="start-btn">Start Game</button>
