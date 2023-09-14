@@ -2,20 +2,17 @@ import React, { useState, useEffect } from "react";
 import { getPlayListUrl } from "../../API/fetch";
 
 export default function MusicSelector() {
-  const [tracks, SetTracks] = useState([]);
+  const [tracks, setTracks] = useState([]);
   const [selectedTrack, setSelectedTrack] = useState(null);
-
 
   useEffect(() => {
     const playListUrl = getPlayListUrl();
 
     fetch(playListUrl)
-      .then((responde) => responde.json())
+      .then((response) => response.json())
       .then((data) => {
         const filteredTracks = data.filter((track) => track.duration === 30);
-
-        
-        SetTracks(filteredTracks);
+        setTracks(filteredTracks);
       })
       .catch((error) => {
         console.error("Error fetching tracks:", error);
@@ -23,7 +20,7 @@ export default function MusicSelector() {
   }, []);
 
   const handleTrackSelection = (track) => {
-    selectedTrack(track);
+    setSelectedTrack(track);
   };
 
   return (
@@ -43,7 +40,11 @@ export default function MusicSelector() {
               <p>{track.title}</p>
               <p>Duration: {track.duration} seconds</p>
               <p>Artist: {track.artist.name}</p>
-              <a href={track.link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={track.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Listen on Deezer
               </a>
             </div>
