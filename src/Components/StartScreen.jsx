@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export default function StartScreen() {
   return (
     <div className="start-screen">
@@ -10,7 +11,9 @@ export default function StartScreen() {
         challenge.
       </p>
       <div className="btn-container">
-        <button className="start-btn">Start Game</button>
+        
+          <button className="start-btn">Start Game</button>
+       
       </div>
     </div>
   );
