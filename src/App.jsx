@@ -7,6 +7,7 @@ import { Button } from "reactstrap";
 import "./App.css";
 import StartScreen from "./Components/StartScreen";
 import MusicSelector from "./Components/MusicSelector";
+import GameBoard from "./Components/GameBoard";
 
 
 function App() {
@@ -16,9 +17,9 @@ function App() {
     <>
       <div className="bg-blue-500 text-white p-4 font-bold underline">
         Hello, Tailwind!
-        
+          
           <StartScreen />
-        <MusicSelector />
+         <MusicSelector />
          <Button color="danger">Click Me</Button>
       </div>
     </>
